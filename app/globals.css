@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --keyframes-bell: bell_animate;
+  --animate-bell: bell_animate 1s ease-in infinite;
+}
+@keyframes bell_animate {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+
+    /* Gray */
+
+
+    --gray-50: #f0f1f3;
+    --gray-100: #d0d3d9;
+    --gray-300: #989fad;
+    --gray-400: #858d9d;
+    --gray-500: #667085;
+    --gray-600: #5d6679;
+    --gray-700: #48505e;
+    --gray-800: #383e49;
+    --gray-900: #2b2f38;
+
+    /* Primary */
+    --primary-50: #e8f1fd;
+    --primary-100: #b6d3fa;
+    --primary-200: #93bdf8;
+    --primary-300: #629ff4;
+    --primary-500: #1570ef;
+    --primary-600: #1366d9;
+    --primary-700: #0f50aa;
+
+
+    /* Error */
+    --error-200: #F8A9A3;
+    --error-500: #f04438;
+    --error-600: #d92d20;
+    
+
+    /* Warning */
+
+    --warning-100:#FDDDB3;
+    --warning-600: #E18308;
+
+    /* Success */
+    --success-200:#92DEBA;  
+    --success-600:#10A760;
+
+
+    /* Background */
+    --bg-main: #f0f1f3;
+    --bg-card: #ffffff;
+
+
+    --violate: #eceaff;
+    --orange: #ffeedb;
+    --green: #ebffed;
+    --table-cell: #666666;
+   
+  
+  }
+  /* .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
