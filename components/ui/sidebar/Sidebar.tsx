@@ -4,7 +4,7 @@ import SidebarItem from './SidebarItem';
 
 const Sidebar = () => {
   return (
-    <aside className="flex flex-col p-9 h-full ">
+    <div className="flex flex-col p-9 h-full ">
       <Brand />
       <div className="flex flex-col justify-between flex-1">
         <ul className="flex flex-col gap-6">
@@ -28,7 +28,7 @@ const Sidebar = () => {
           ))}
         </ul>
       </div>
-    </aside>
+    </div>
   );
 };
 

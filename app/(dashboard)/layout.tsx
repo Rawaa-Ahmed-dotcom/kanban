@@ -1,17 +1,20 @@
 import Sidebar from '@/components/ui/sidebar/Sidebar';
-import Navbar from "@/components/ui/navbar/Navbar";
+import Navbar from '@/components/ui/navbar/Navbar';
+import { SidebarProvider } from '@/context/SidebarContext';
+import SidebarDrawer from '@/components/ui/sidebar/SidebarDrawer';
 
-const layout = ({children} : {children : React.ReactNode} ) => {
+const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="flex! h-screen overflow-x-hidden">
-      <div className="w-[18%] h-full border border-(--gray-50) bg-white ">
-        <Sidebar />
-      </div>
-      <div className = "w-[82%] ">
-        <Navbar/>
-        {children}
+    <SidebarProvider>
+      
+      <main className="flex! h-screen overflow-x-hidden w-full">
+        <SidebarDrawer><Sidebar/></SidebarDrawer>
+        <div className="w-full">
+          <Navbar />
+          {children}
         </div>
-    </main>
+      </main>
+    </SidebarProvider>
   );
 };
 

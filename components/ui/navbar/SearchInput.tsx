@@ -1,16 +1,21 @@
 import { IoSearch } from 'react-icons/io5';
 
-const SearchInput = () => {
+interface SearchInputProps {
+  autoFocus?: boolean;
+}
+
+const SearchInput = ({ autoFocus = false }: SearchInputProps) => {
   return (
-    <div className="flex items-center gap-2 p-3 border border-(--gray-300) rounded-3xl bg-white transition-all duration-200 focus-within:-translate-y-0.5 focus-within:shadow-md focus-within:border-(--gray-500) group">
+    <div className="flex items-center gap-3 px-3.5 py-2.5 border border-(--gray-100) rounded-xl bg-(--bg-main, #f9fafb)  focus-within:border-(--primary-500) focus-within:ring-3 focus-within:ring-(--primary-100) transition-all duration-150 group">
       <IoSearch
-        size={24}
-        className="text-(--gray-400) transition-colors duration-200 group-focus-within:text-(--gray-700)"
+        size={20}
+        className="text-(--gray-400) shrink-0 group-focus-within:text-(--primary-500) transition-colors"
       />
       <input
         type="text"
-        className="placeholder:text-(--gray-400) text-[16px] placeholder:text-[16px] font-normal outline-none bg-transparent p-1 flex-1 text-(--gray-600)"
-        placeholder="Search product, supplier, order"
+        autoFocus={autoFocus}
+        className="w-full bg-transparent text-[15px] text-(--gray-900) placeholder:text-(--gray-400) outline-none font-normal"
+        placeholder="Search product, supplier, order..."
       />
     </div>
   );
