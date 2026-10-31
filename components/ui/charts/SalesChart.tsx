@@ -14,8 +14,9 @@ import { SalesChartProps } from '@/lib/types';
 
 export default function SalesChart({ data }: { data: SalesChartProps }) {
   return (
-    <div style={{ width: '100%', height: "100%"}}>
-      <ResponsiveContainer>
+    <div className='w-full h-80 overflow-x-auto overflow-y-hidden'>
+        <div className = "h-full min-w-150">
+          <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
           barGap={4}
@@ -70,6 +71,8 @@ export default function SalesChart({ data }: { data: SalesChartProps }) {
           />
         </BarChart>
       </ResponsiveContainer>
+          </div>
     </div>
-  );
+    
+  )
 }

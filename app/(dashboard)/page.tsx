@@ -15,29 +15,29 @@ import LowQuantityStock from '@/components/dashboard/lowStock.tsx/LowQuantitySto
 const page = () => {
   return (
     <div className="py-5.5 px-8 bg-(--bg-main)">
-      <div className="grid grid-cols-3 grid-rows-6 gap-x-5.5 gap-y-7.25">
-        <div className="col-span-2 row-span-1">
-          <CustomOverview title="Sales Overview" kpisData={salesKpis} />
+      <div className="grid grid-cols-1 lg:grid-cols-3  gap-x-5.5 gap-y-7.25">
+        <div className="col-span-1 lg:col-span-2">
+          <CustomOverview title="Sales Overview" kpisData={salesKpis} kpiClass='mg:flex-row flex-col text-center leading-[22px]' gridClass = "max-sm:grid-cols-2 grid-cols-4"/>
         </div>
-        <div className="col-span-1 row-span-1">
+        <div className="col-span-1 ">
           <CustomSummary title="Inventory Summary" kpisData={inventoryKpis} />
         </div>
-        <div className="col-span-2 row-span-1">
-          <CustomOverview title="Purchase Overview" kpisData={purchaseKpis} />
+        <div className="col-span-1 lg:col-span-2 ">
+          <CustomOverview title="Purchase Overview" kpisData={purchaseKpis} kpiClass='md:flex-row flex-col text-center leading-[22px]' gridClass = "max-sm:grid-cols-2 grid-cols-4"/>
         </div>
-        <div className="col-span-1 row-span-1">
+        <div className="col-span-1 ">
           <CustomSummary title="Product Summary" kpisData={productKpis} />
         </div>
-        <div className="col-span-2 row-span-2">
+        <div className="col-span-1 lg:col-span-2 min-w-0">
           <Sales_Purchases data={monthlyData} />
         </div>
-        <div className="col-span-1 row-span-2 ">
+        <div className="col-span-1">
           <OrderSummary />
         </div>
-        <div className="col-span-2 row-span-2">
+        <div className="col-span-1 lg:col-span-2 ">
           <TopSellingStock />
         </div>
-        <div className="col-span-1 row-span-2">
+        <div className="col-span-1 ">
           <LowQuantityStock />
         </div>
       </div>

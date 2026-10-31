@@ -5,7 +5,9 @@ import DashboardCard from "../ui/DashboardCard";
 const Sales_Purchases = ({data} : {data : SalesChartProps}) => {
   return (
    <DashboardCard title="Sales & Purchase">
-    <SalesChart data={data} />
+    
+      <SalesChart data={data} />
+    
   </DashboardCard>
   )
 }

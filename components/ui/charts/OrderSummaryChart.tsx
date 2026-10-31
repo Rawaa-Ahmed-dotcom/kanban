@@ -14,8 +14,9 @@ import {
 
 const OrderSummaryChart = ({ data }: { data: OrderSummaryProps }) => {
   return (
-    <div style={{ width: '100%', height: '100%' }}>
-      <ResponsiveContainer>
+    <div className = "h-80 w-full overflow-x-auto overflow-y-hidden">
+ <div className = "h-full min-w-100">
+      <ResponsiveContainer width = "100%" height = "100%">
         <LineChart
           data={data}
           margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
@@ -67,6 +68,8 @@ const OrderSummaryChart = ({ data }: { data: OrderSummaryProps }) => {
         </LineChart>
       </ResponsiveContainer>
     </div>
+    </div>
+   
   );
 };
 
