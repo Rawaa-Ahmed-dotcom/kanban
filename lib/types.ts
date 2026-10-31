@@ -81,6 +81,7 @@ export type Column<T> = {
 export type TableProps<T> = {
   columns: Column<T>[];
   data: T[];
+  customClass : string;
 };
 
 export type TopSellingProducts = {
@@ -104,3 +105,10 @@ export type DashboardCardProps = {
   link?: { href: string; label?: string };
   className?: string;
 };
+
+
+export type SidebarContextProps = {
+  isOpen : boolean;
+  toggle : () => void;
+  close : () => void;
+}

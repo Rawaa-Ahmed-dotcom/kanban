@@ -11,7 +11,7 @@ import {SalesChartProps , OrderSummaryProps, Column, TopSellingProducts} from ".
 
 export const buttonVariants = {
     'primary' : 'bg-(--primary-600) text-white hover:bg-(--primary-700) ',
-    'outline' : 'bg-white border border-(--gray-300) text-(--gray-800)'
+    'outline' : 'bg-(--bg-card) border border-(--gray-300) text-(--gray-800)'
 }
 
 export const sidebarItems = [
